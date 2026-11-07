@@ -1,0 +1,31 @@
+name: Weekly Modelwise update
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Modelwise
+        uses: actions/checkout@v4
+
+      - name: Update model data
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          MODELWISE_API_BASE: ${{ secrets.MODELWISE_API_BASE }}
+          MODELWISE_API_TOKEN: ${{ secrets.MODELWISE_API_TOKEN }}
+        run: node scripts/weekly-update.mjs
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/catalog.json dist/workbook-models.json dist/changelog.json dist/update-status.json
+          git diff --cached --quiet || git commit -m "chore: weekly model data update"
+          git push
