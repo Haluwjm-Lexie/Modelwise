@@ -1,0 +1,30 @@
+(function(root){
+'use strict';
+function estimate(row,u){
+ if(!row||!row.calculable)throw Error('这个型号没有可用于文本测算的报价');
+ for(const k of ['input','output','calls'])if(u[k]===''||u[k]==null||!Number.isFinite(Number(u[k]))||Number(u[k])<0)throw Error('请填写单次输入、单次输出和月调用次数');
+ const v={...u};for(const k of ['input','output','calls','retry','hit','write5','write1']){v[k]=Number(u[k]||0);if(!Number.isFinite(v[k])||v[k]<0)throw Error('请填写有效的非负数')}
+ if(v.retry>100||v.hit+v.write5+v.write1>100)throw Error('重试或缓存比例不能超过 100%');
+ if(v.input<(row.minInput||0)||(row.maxInput!=null&&v.input>row.maxInput))throw Error('输入量不在当前报价档位，请换一个档位');
+ for(const [p,k] of [[v.hit,'cacheRead'],[v.write5,'cacheWrite5m'],[v.write1,'cacheWrite1h']])if(p>0&&row[k]==null)throw Error('该型号未提供这项缓存价格');
+ const inRate=(1-(v.hit+v.write5+v.write1)/100)*row.input+v.hit/100*(row.cacheRead||0)+v.write5/100*(row.cacheWrite5m||0)+v.write1/100*(row.cacheWrite1h||0);
+ const inputFee=v.input*inRate/1e6,outputFee=v.output*row.output/1e6,single=inputFee+outputFee,calls=v.calls*(1+v.retry/100),api=single*calls,fx=row.currency==='CNY'?1:Number(u.fx),apiCNY=Number.isFinite(fx)&&fx>0?api*fx:null;
+ if(u.pass!==''&&u.pass!=null&&(!Number.isFinite(Number(u.pass))||Number(u.pass)<0||Number(u.pass)>100))throw Error('合格率请填写 0 到 100');
+ const present=k=>u[k]!==''&&u[k]!=null&&Number.isFinite(Number(u[k]))&&Number(u[k])>=0;
+ for(const k of ['fixed','labor','setup','months','income'])if(u[k]!==''&&u[k]!=null&&(!Number.isFinite(Number(u[k]))||Number(u[k])<0))throw Error('项目费用请填写非负数');
+ if(u.months!==''&&u.months!=null&&Number(u.months)<=0)throw Error('分摊月数需要大于 0');
+ const complete=['fixed','labor','setup'].every(present)&&(Number(u.setup)===0||present('months')&&Number(u.months)>0),amortized=complete?(Number(u.setup)===0?0:Number(u.setup)/Number(u.months)):null;
+ const project=u.mode!=='personal',total=apiCNY==null?null:project?(complete?apiCNY+Number(u.fixed)+Number(u.labor)+amortized:null):apiCNY;
+ const net=project&&total!=null&&present('income')?Number(u.income)-total:null,roi=net!=null&&total>0?net/total*100:null;
+ const accepted=u.tasks!==''&&Number(u.tasks)>0&&u.pass!==''&&Number(u.pass)>0?Number(u.tasks)*Number(u.pass)/100:null;
+ return {single,calls,api,apiCNY,total,net,roi,inputFee,outputFee,inRate,amortized,accepted,unit:accepted&&total!=null?total/accepted:null,budgetDelta:total!=null&&u.budget!==''&&Number(u.budget)>=0?Number(u.budget)-total:null};
+}
+const tasks={analytics:{label:'数据分析与汇报',tags:['研究','办公','推理','文档'],keywords:['数据','分析','报告','汇报','ppt','表格','金融','财报']},writing:{label:'内容写作',tags:['写作','办公'],keywords:['写作','创作','文案','办公','内容生成']},coding:{label:'代码开发',tags:['编程'],keywords:['代码','编程','coding','coder','开发','agent']},documents:{label:'长文档分析',tags:['文档','研究'],keywords:['长文本','长上下文','文档','研究','金融']},reasoning:{label:'复杂推理',tags:['推理'],keywords:['推理','数学','科研','建模']},qa:{label:'知识问答',tags:['问答','搜索','知识库'],keywords:['问答','知识','检索','对话','搜索']},image:{label:'图片创作',tags:['图片生成'],keywords:['生图','图像生成','图片生成','image','seedream']},video:{label:'视频制作',tags:['视频生成'],keywords:['视频生成','视频创作','hailuo','seedance','h3']},audio:{label:'语音处理',tags:['语音'],keywords:['语音','音频','speech','tts','转写']}};
+function inferTasks(description){const text=String(description||'').toLowerCase();const hits=Object.entries(tasks).map(([id,t])=>({id,n:t.keywords.filter(k=>text.includes(k.toLowerCase())).length})).filter(x=>x.n).sort((a,b)=>b.n-a.n);return hits.length?hits.slice(0,2).map(x=>x.id):['qa']}
+function recommend(records,companies,opts){const inferred=opts.task&&opts.task!=='auto'?[opts.task]:inferTasks(opts.description),selected=inferred.map(k=>tasks[k]).filter(Boolean);return records.map(row=>{const company=companies.find(t=>t.id===row.tool);if(!company)return null;if(opts.region&&company.region!==opts.region)return null;if(opts.allow&&!opts.allow.split(/[,，、\n]/).map(x=>x.trim()).filter(Boolean).some(x=>(company.name+company.vendor+(company.aliases||[]).join(' ')).toLowerCase().includes(x.toLowerCase())))return null;if(/存量|历史|停用|下线|迁移/.test(row.serviceStatus))return null;const text=(row.description+' '+row.api).toLowerCase(),matched=[...new Set(selected.flatMap(t=>t.keywords).filter(k=>text.includes(k.toLowerCase())))],family=(company.tags||[]).filter(t=>selected.flatMap(x=>x.tags).includes(t));if(!matched.length&&!family.length)return null;if(inferred.every(t=>['image','video','audio'].includes(t))&&!matched.length)return null;return {row,company,score:matched.length*3+family.length,reason:matched.length?matched.slice(0,3).join(' · '):selected.map(t=>t.label).join(' / ')};}).filter(Boolean).sort((a,b)=>b.score-a.score||companies.indexOf(a.company)-companies.indexOf(b.company));}
+function shortlist(list,limit=3){const seen=new Set(),counts={};return list.filter(x=>{const key=x.row.tool+'/'+x.row.api;if(seen.has(key)||(counts[x.row.tool]||0)>=1)return false;seen.add(key);counts[x.row.tool]=(counts[x.row.tool]||0)+1;return true}).slice(0,limit)}
+function parseUsage(text){const obj=typeof text==='string'?JSON.parse(text):text;const u=obj.usage||obj.usageMetadata||obj;const input=u.prompt_tokens??u.input_tokens??u.promptTokenCount,output=u.completion_tokens??u.output_tokens??(u.candidatesTokenCount!=null?u.candidatesTokenCount+(u.thoughtsTokenCount||0):undefined);if(!Number.isFinite(input)||input<0||!Number.isFinite(output)||output<0)throw Error('未找到有效的输入与输出 token；请粘贴 API usage JSON');return {input,output}}
+function publicStatus(row){if(/存量/.test(row.serviceStatus))return '存量可用';if(/历史/.test(row.serviceStatus))return '历史型号';if(/迁移/.test(row.serviceStatus))return '迁移中';if(/开放权重|开源/.test(row.serviceStatus))return '开放权重';if(/优惠/.test(row.serviceStatus))return '优惠中';if(/预览/.test(row.serviceStatus))return '预览版';return /在售|列价|列出|正式/.test(row.serviceStatus)?'可用':row.serviceStatus;}
+function isRetired(row){return /已停用|已下线|已退役/.test(row.serviceStatus)}
+const api={estimate,recommend,tasks,publicStatus,isRetired,inferTasks,shortlist,parseUsage};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.ModelwiseCore=api;
+})(typeof window!=='undefined'?window:globalThis);
