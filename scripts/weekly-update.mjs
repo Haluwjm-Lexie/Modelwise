@@ -40,9 +40,24 @@ if (apiBase && apiToken) {
   if (!review.ok) throw new Error(`Modelwise review HTTP ${review.status}`);
 }
 
-const changelog = await readJson('changelog.json');
-changelog.unshift({ date: new Date().toISOString().slice(0, 10), title: '每周模型资料检查', summary: `已检查 ${products.length} 个产品；AIHOT 发现 ${discovered.length} 条动态，结果由 DeepSeek 整理并按官网证据核验。`, source: 'GitHub Actions' });
-await writeJson('changelog.json', changelog.slice(0, 200));
+const changelogData = await readJson('changelog.json');
+const changelogItems = Array.isArray(changelogData)
+  ? changelogData
+  : (Array.isArray(changelogData.items) ? changelogData.items : []);
+
+changelogItems.unshift({
+  date: new Date().toISOString().slice(0, 10),
+  title: '每周模型资料检查',
+  summary: `已检查 ${products.length} 个产品；AIHOT 发现 ${discovered.length} 条动态，结果由 DeepSeek 整理并按官网证据核验。`,
+  source: 'GitHub Actions'
+});
+
+await writeJson(
+  'changelog.json',
+  Array.isArray(changelogData)
+    ? changelogItems.slice(0, 200)
+    : { ...changelogData, items: changelogItems.slice(0, 200) }
+);
 await writeJson('update-status.json', { checkedAt: new Date().toISOString(), products: products.length, discovered: discovered.length, events: (result.events || []).length, models: (result.models || []).length, source: 'AIHOT + DeepSeek + official sources' });
 await writeJson('catalog.json', catalog);
 await writeJson('workbook-models.json', workbook);
