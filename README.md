@@ -40,3 +40,4 @@ Modelwise 使用 GitHub Actions 每周检查一次模型资料：
 
 - 在线使用：部署后填写 GitHub Pages 地址
 - 项目仓库：https://github.com/Haluwjm-Lexie/Modelwise
+- Modelwise GitHub Pages deployment
