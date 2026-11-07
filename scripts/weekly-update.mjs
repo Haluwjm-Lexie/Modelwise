@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 
-const root = new URL('../dist/', import.meta.url);
+const root = new URL('../', import.meta.url);
 const readJson = async (name) => JSON.parse(await fs.readFile(new URL(name, root), 'utf8'));
 const writeJson = async (name, value) => fs.writeFile(new URL(name, root), `${JSON.stringify(value, null, 2)}\n`);
 
