@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/catalog.json dist/workbook-models.json dist/changelog.json dist/update-status.json
+          git add catalog.json workbook-models.json changelog.json update-status.json
           git diff --cached --quiet || git commit -m "chore: weekly model data update"
           git push
