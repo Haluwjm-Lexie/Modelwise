@@ -1,6 +1,6 @@
 'use strict';
 
-const MODELWISE_AIDAILY_URL='https://haluwjm-lexie.github.io/AI-Daily/?view=models';
+const MODELWISE_AIDAILY_URL='https://haluwjm-lexie.github.io/AI-Daily/?view=daily';
 
 function mwV4SyncChrome(){
   const mark=document.querySelector('.wordmark');
@@ -14,13 +14,12 @@ function mwV4SyncChrome(){
 
   const nav=document.querySelector('nav');
   const changelog=document.querySelector('[data-nav="changelog"]');
-  if(nav && changelog && !nav.querySelector('.external-nav')){
+  if(nav && changelog && !nav.querySelector('[data-nav="aidaily"]')){
     const a=document.createElement('a');
     a.className='external-nav';
-    a.href=MODELWISE_AIDAILY_URL;
-    a.target='_blank';
-    a.rel='noopener noreferrer';
-    a.innerHTML='<span>↗</span> 返回 AI Daily';
+    a.href='#aidaily';
+    a.dataset.nav='aidaily';
+    a.innerHTML='<span>✧</span> 探索 AI Daily';
     nav.insertBefore(a,changelog);
   }
 }
@@ -78,10 +77,57 @@ renderChangelog=async function(){
   </section>`:'';
 
   $('app').innerHTML=`<div class="changelog-page">
-    <div class="changelog-intro"><div><h1>更新日志</h1><p>新功能、调整、资料更新，都写在这里。</p></div><a class="changelog-return" href="${MODELWISE_AIDAILY_URL}" target="_blank" rel="noopener noreferrer">返回 AI Daily ↗</a></div>
+    <div class="changelog-intro"><div><h1>更新日志</h1><p>新功能、调整、资料更新，都写在这里。</p></div></div>
     <div class="changelog-list">${days||'<div class="empty">暂时还没有更新记录。</div>'}</div>${history}
   </div>`;
 };
 
 mwV4SyncChrome();
 window.addEventListener('hashchange',mwV4SyncChrome);
+
+
+// V4.1 · AI Daily is a peer product: discover it before visiting its homepage.
+function mwRenderAIDailyOverview(){
+  if(location.hash!=='#aidaily')return;
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav==='aidaily'));
+  const dock=document.getElementById('compare-dock');
+  if(dock)dock.classList.add('hidden');
+  const app=document.getElementById('app');
+  if(!app)return;
+  app.innerHTML=`<div class="mw-daily-page">
+    <div class="mw-daily-eyebrow"><span class="mw-live-dot"></span> LEXIE · PRODUCT ECOSYSTEM</div>
+    <div class="mw-daily-hero">
+      <div class="mw-daily-copy">
+        <div class="mw-daily-product"><span class="mw-daily-logo">A<span class="mw-daily-logo-dot">.</span></span><span>AI Daily</span></div>
+        <h1>每天一点，<br>读懂 AI 世界<span class="mw-daily-period">.</span></h1>
+        <p class="mw-daily-lead">让 AI 信息，成为可以积累的知识。</p>
+        <p class="mw-daily-summary">AI Daily 是一个独立的 AI 情报阅读器，集中呈现 AI 日报、GitHub Trending 和长期趋势分析。用更清晰的归档与阅读体验，持续跟踪值得关注的技术和产品变化。</p>
+        <div class="mw-daily-actions">
+          <a class="mw-daily-cta" href="${MODELWISE_AIDAILY_URL}" target="_blank" rel="noopener noreferrer">进入 AI 日报 <span aria-hidden="true">↗</span></a>
+          <a class="mw-daily-secondary" href="#library">返回 Modelwise</a>
+        </div>
+        <p class="mw-daily-linkhint">独立网站 · 进入后默认打开「AI 日报」</p>
+      </div>
+      <div class="mw-daily-showcase">
+        <div class="mw-daily-image-header"><span class="mw-daily-dots"><i></i><i></i><i></i></span><span>AI Daily / AI 日报</span><span>↗</span></div>
+        <a class="mw-daily-image" href="${MODELWISE_AIDAILY_URL}" target="_blank" rel="noopener noreferrer" aria-label="查看真实的 AI Daily 网站">
+          <img src="assets/ai-daily-real-preview.png" alt="AI Daily 真实网站截图：左侧内容导航、往期日报、AI 日报正文阅读区" loading="eager" decoding="async">
+        </a>
+        <div class="mw-daily-image-caption">真实产品界面 · AI Daily 日报阅读页</div>
+      </div>
+    </div>
+    <div class="mw-daily-features-title"><h2>一个入口，持续了解 AI</h2><span>EXPLORE THE FEATURES</span></div>
+    <div class="mw-daily-features">
+      <article><span class="mw-daily-feature-index">01</span><h3>AI 日报与往期</h3><p>阅读每日重要动态，并按日期查阅过往内容。</p></article>
+      <article><span class="mw-daily-feature-index">02</span><h3>GitHub Trending</h3><p>观察热门开源项目与不同周期的技术趋势。</p></article>
+      <article><span class="mw-daily-feature-index">03</span><h3>趋势分析</h3><p>从已归档的信息中寻找更长期的变化方向。</p></article>
+      <article><span class="mw-daily-feature-index">04</span><h3>收藏与阅读偏好</h3><p>保存关心的内容，建立自己的 AI 信息阅读习惯。</p></article>
+    </div>
+    <div class="mw-daily-footerline"><span>AI Daily × Modelwise</span><a href="${MODELWISE_AIDAILY_URL}" target="_blank" rel="noopener noreferrer">打开 AI Daily ↗</a></div>
+  </div>`;
+  window.scrollTo({top:0,behavior:'instant'});
+}
+// Registered last so the original router still handles all existing Modelwise pages.
+window.addEventListener('hashchange',mwRenderAIDailyOverview);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mwRenderAIDailyOverview);
+else mwRenderAIDailyOverview();
