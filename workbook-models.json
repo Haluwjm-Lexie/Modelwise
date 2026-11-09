@@ -1815,7 +1815,7 @@
       "cacheWrite1h": null,
       "conditions": "免费",
       "serviceStatus": "在售",
-      "note": "2026年11月9日起为现有 Chat 与 API 入口唯一保留模型。",
+      "note": "2026-11-09 起现有 Chat/API 入口仅保留该模型。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/service-migration/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4013,7 +4013,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "已下线",
-      "note": "官方说明该模型将于 2026年10月31日下线。",
+      "note": "官方说明将于 2026-10-31 下线。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4042,7 +4042,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4070,8 +4070,8 @@
       "cacheWrite5m": null,
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
-      "serviceStatus": "迁移中",
-      "note": "遗留兼容 ID，2026年11月9日起请求将自动路由至 intern-s2。",
+      "serviceStatus": "已弃用",
+      "note": "遗留兼容模型 ID，临时可用。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4100,7 +4100,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4129,7 +4129,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4158,7 +4158,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4187,7 +4187,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
@@ -4216,7 +4216,7 @@
       "cacheWrite1h": null,
       "conditions": "官方已发布；尚未录入可算价的文字 token 单价。",
       "serviceStatus": "迁移中",
-      "note": "2026年11月9日起请求将自动路由至 intern-s2。",
+      "note": "2026-11-09 起请求自动路由至 intern-s2。",
       "source": "https://internlm.intern-ai.org.cn/docEn/docs/Models/",
       "checked": "2026-11-09",
       "provenance": {
