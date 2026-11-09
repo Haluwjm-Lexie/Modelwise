@@ -1,4 +1,4 @@
-/* Match the compact visual rhythm of the private Modelwise reference. */
+/* Modelwise company pages: intentionally restrained and compact. */
 @media (min-width:651px){
   .sidebar{padding:27px 23px 25px}
   .brand-caption{margin-top:12px}
@@ -9,16 +9,38 @@
   .company-view main{padding-top:35px}
   .company-view .back{margin-bottom:18px}
   .company-view .company-header{margin-bottom:13px}
-  .company-view .company-description{line-height:1.75}
-  .company-view .timeline-shell{margin-top:24px!important;padding:22px 22px 14px}
-  .company-view .timeline-track.continuous{gap:20px;padding:7px 0 31px}
-  .company-view .timeline-track.continuous:before{top:auto;bottom:10px}
-  .company-view .timeline-track.continuous .time-node{height:216px;justify-content:flex-start!important}
-  .company-view .timeline-track.continuous .time-card{height:160px;padding:16px}
-  .company-view .timeline-track.continuous .time-node:nth-child(even) .time-card{background:var(--panel)}
-  .company-view .timeline-track.continuous .time-card:after,
-  .company-view .timeline-track.continuous .time-node:nth-child(even) .time-card:after{top:auto;bottom:-22px;height:21px}
-  .company-view .timeline-track.continuous .time-dot{top:auto;bottom:4px}
-  .company-view .timeline-track.continuous .time-card p{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.5}
-  .company-view .timeline-track.continuous .time-source{display:block;margin-top:7px;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .company-view .company-description{line-height:1.7}
+}
+
+.company-view .timeline-shell{margin-top:24px!important;padding:20px 22px 16px}
+.mw-timeline-top{margin-bottom:4px}
+.mw-timeline-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y;overscroll-behavior-x:contain}
+.mw-timeline-scroll::-webkit-scrollbar{display:none}
+.mw-timeline-scroll.dragging{cursor:grabbing;user-select:none}
+.mw-timeline-rail{position:relative;display:flex;gap:18px;width:max-content;min-width:100%;height:292px;padding:8px 0}
+.mw-timeline-rail::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
+.mw-event{position:relative;flex:0 0 270px;width:270px;height:276px}
+.mw-event-card{position:absolute;left:0;width:100%;min-height:108px;max-height:126px;overflow:hidden;padding:13px 14px;border:1px solid var(--line);border-radius:13px;background:var(--panel);color:var(--text);transition:border-color .18s,transform .18s}
+.mw-event-card:hover{border-color:var(--green);transform:translateY(-2px)}
+.mw-event.above .mw-event-card{top:0}
+.mw-event.below .mw-event-card{bottom:0;background:var(--bg)}
+.mw-event-card::after{content:'';position:absolute;left:24px;width:1px;height:22px;background:var(--line)}
+.mw-event.above .mw-event-card::after{bottom:-23px}
+.mw-event.below .mw-event-card::after{top:-23px}
+.mw-event-dot{position:absolute;left:19px;top:calc(50% - 5px);z-index:1;width:10px;height:10px;border:2px solid var(--panel);border-radius:50%;background:var(--green);box-shadow:0 0 0 2px var(--panel)}
+.mw-event-meta{display:flex;gap:8px;margin-bottom:5px;color:var(--muted);font-size:12px;line-height:1.4}
+.mw-event-meta b{color:var(--green);font-weight:650}
+.mw-event-card h3{font-size:15px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mw-event-card p{margin-top:4px;font-size:12px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mw-event-card small{display:block;margin-top:6px;color:var(--muted);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mw-empty-timeline{padding:30px 0 18px;font-size:14px}
+
+@media (max-width:650px){
+  .company-view .timeline-shell{padding:17px 14px}
+  .mw-timeline-rail{height:252px;gap:12px}
+  .mw-event{flex-basis:235px;width:235px;height:236px}
+  .mw-event-card{min-height:92px;max-height:108px;padding:10px 11px}
+  .mw-event-card h3{font-size:14px}
+  .mw-event-card p,.mw-event-card small{display:none}
+  .mw-event-meta{font-size:11px}
 }
