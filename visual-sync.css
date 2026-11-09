@@ -11,14 +11,14 @@
   .company-view .company-header{margin-bottom:13px}
   .company-view .company-description{line-height:1.75}
   .company-view .timeline-shell{margin-top:24px!important;padding:22px 22px 14px}
-  .company-view .timeline-track.continuous{gap:20px;padding:7px 0 39px}
+  .company-view .timeline-track.continuous{gap:20px;padding:7px 0 31px}
   .company-view .timeline-track.continuous:before{top:auto;bottom:10px}
-  .company-view .timeline-track.continuous .time-node{height:278px;justify-content:flex-start!important}
-  .company-view .timeline-track.continuous .time-card{height:220px;padding:18px}
+  .company-view .timeline-track.continuous .time-node{height:216px;justify-content:flex-start!important}
+  .company-view .timeline-track.continuous .time-card{height:160px;padding:16px}
   .company-view .timeline-track.continuous .time-node:nth-child(even) .time-card{background:var(--panel)}
   .company-view .timeline-track.continuous .time-card:after,
-  .company-view .timeline-track.continuous .time-node:nth-child(even) .time-card:after{top:auto;bottom:-29px;height:28px}
+  .company-view .timeline-track.continuous .time-node:nth-child(even) .time-card:after{top:auto;bottom:-22px;height:21px}
   .company-view .timeline-track.continuous .time-dot{top:auto;bottom:4px}
-  .company-view .timeline-track.continuous .time-card p{white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.55}
-  .company-view .timeline-track.continuous .time-source{display:block;margin-top:10px;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .company-view .timeline-track.continuous .time-card p{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.5}
+  .company-view .timeline-track.continuous .time-source{display:block;margin-top:7px;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
