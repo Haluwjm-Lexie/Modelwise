@@ -28,16 +28,25 @@ async function fetchText(url) {
 }
 
 async function aiHot(product) {
-  const q = encodeURIComponent([product.name, product.vendor, ...(product.aliases || [])].join(' '));
-  const url = `https://aihot.news/api/v1/items?window=7d&limit=30&mode=selected&q=${q}`;
-  try {
-    const response = await fetch(url, { headers: { 'User-Agent': 'Modelwise-weekly-verifier/2.0' }, signal: AbortSignal.timeout(15000) });
-    if (!response.ok) return [];
-    const data = await response.json();
-    return (Array.isArray(data.items) ? data.items : [])
-      .filter((item) => ['ai-models', 'ai-products'].includes(item.category))
-      .map((item) => ({ title: item.title, summary: item.summary, publishedAt: item.publishedAt, aihotSource: item.links?.aihot, originalSource: item.links?.original }));
-  } catch { return []; }
+  const queries = unique([product.name, ...(product.aliases || [])]).slice(0, 5);
+  const batches = await Promise.all(queries.map(async (query) => {
+    const url = `https://aihot.news/api/v1/items?window=7d&limit=30&mode=selected&q=${encodeURIComponent(query)}`;
+    try {
+      const response = await fetch(url, { headers: { 'User-Agent': 'Modelwise-weekly-verifier/2.1' }, signal: AbortSignal.timeout(15000) });
+      if (!response.ok) return [];
+      const data = await response.json();
+      return (Array.isArray(data.items) ? data.items : [])
+        .filter((item) => ['ai-models', 'ai-products'].includes(item.category))
+        .map((item) => ({ title: item.title, summary: item.summary, publishedAt: item.publishedAt, aihotSource: item.links?.aihot, originalSource: item.links?.original }));
+    } catch { return []; }
+  }));
+  const seen = new Set();
+  return batches.flat().filter((item) => {
+    const key = item.aihotSource || `${item.title}|${item.publishedAt}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 async function deepSeekJson(payload) {
@@ -56,14 +65,15 @@ function hasEvent(events, item) { return events.some((event) => event.tool === i
 function hasWorkbookRecord(records, item) { return records.some((record) => record.tool === item.tool && String(record.api || '').toLowerCase() === String(item.api || '').toLowerCase()); }
 function hasOffer(offers, item) { return offers.some((offer) => offer.tool === item.tool && String(offer.api || '').toLowerCase() === String(item.api || '').toLowerCase() && offer.status !== 'retired'); }
 
-function normalize(product, answer, domains, existingIds) {
+function normalize(product, answer, domains) {
   const events = [];
   const models = [];
   const offers = [];
   const lifecycle = [];
   for (const item of Array.isArray(answer.events) ? answer.events : []) {
     const date = /^\d{4}-\d{2}-\d{2}$/.test(item.announcementDate || item.date) ? (item.announcementDate || item.date) : '';
-    if (!item.name || !item.summary || !date || !allowedSource(item.source, domains) || !String(item.evidence || '').trim()) continue;
+    const sourceIsAIHot = hostname(item.source) === 'aihot.news';
+    if (!item.name || !item.summary || !date || (!sourceIsAIHot && !allowedSource(item.source, domains)) || !String(item.evidence || '').trim()) continue;
     events.push({ tool: product.id, date, name: String(item.name).slice(0, 180), ability: String(item.summary).slice(0, 600), source: item.source, status: item.status || '已发布', datePrecision: 'day', evidence: String(item.evidence).slice(0, 500), checked: today, kind: item.kind || '模型', effectiveDate: /^\d{4}-\d{2}-\d{2}$/.test(item.effectiveDate) ? item.effectiveDate : null });
   }
   for (const item of Array.isArray(answer.models) ? answer.models : []) {
@@ -104,8 +114,9 @@ for (const product of products) {
   run.officialPagesRead += readable.length;
   if (!readable.length) { run.errors.push({ tool: product.id, error: 'No official source page could be read; existing data retained.' }); continue; }
   const prompt = `You update one AI product in a public catalogue. Return JSON only. Do not infer, invent, or fill missing facts. AIHOT is only a lead; only official evidence below may support an update. A price may be returned only for a text model with explicit input AND output price per 1,000,000 text tokens. Never treat subscriptions, image/video/audio, per-minute/second, credits, or request prices as token prices. Keep announcementDate and effectiveDate separate. If there is no verified change, return empty arrays.\n\nProduct: ${JSON.stringify({ id: product.id, name: product.name, vendor: product.vendor, aliases: product.aliases || [] })}\nAllowed official domains: ${JSON.stringify([...domains])}\nAIHOT leads: ${JSON.stringify(discovery).slice(0, 12000)}\nOfficial source text: ${JSON.stringify(readable.map(({ url, text }) => ({ url, text }))).slice(0, 50000)}\n\nRequired JSON schema:\n{"events":[{"name":"","summary":"","kind":"模型|产品|价格|迁移","announcementDate":"YYYY-MM-DD","effectiveDate":"YYYY-MM-DD or null","status":"","source":"official URL","evidence":"short official supporting text"}],"models":[{"api":"","name":"","description":"","announcementDate":"YYYY-MM-DD or null","status":"在售|预览|下线|迁移","source":"official URL","evidence":"short official supporting text"}],"prices":[{"api":"","name":"","currency":"CNY|USD","inputPerMillionTokens":0,"outputPerMillionTokens":0,"effectiveDate":"YYYY-MM-DD or null","validUntil":"YYYY-MM-DD or null","status":"active|scheduled","note":"","source":"official URL","evidence":"short official supporting text"}],"lifecycle":[{"api":"","status":"active|preview|scheduled|deprecated|retired|migrating","note":"","source":"official URL","evidence":"short official supporting text"}]}`;
+  const timelineInstruction = `\n\nTimeline policy override: AIHOT is the primary source for timeline events. If an AIHOT lead is genuinely about this product, return it in events using its aihotSource URL as source and evidence beginning "AIHOT：". When AIHOT has no relevant item, return a relevant official announcement as the fallback. Do not turn an old product/model list into a new timeline event. AIHOT is allowed only for events; models, prices, and lifecycle records still require an official URL.`;
   try {
-    const changes = normalize(product, await deepSeekJson(prompt), domains);
+    const changes = normalize(product, await deepSeekJson(prompt + timelineInstruction), domains);
     for (const item of changes.events) if (!hasEvent(events, item)) { item.id = `weekly-${product.id}-${safeId(item.name)}-${item.date}`; events.push(item); run.eventsAdded++; }
     for (const item of changes.models) {
       if (!hasWorkbookRecord(records, item)) {
