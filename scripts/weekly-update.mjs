@@ -49,6 +49,82 @@ async function aiHot(product) {
   });
 }
 
+// AIHOT's topic API is the canonical source for the visible "大事记".  The
+// /api/v1/items endpoint above is intentionally only a short-term discovery
+// feed; it must never be used to fabricate a product's historical timeline.
+const AIHOT_TOPIC_OVERRIDES = {
+  chatgpt: 'openai', gemini: 'google', claude: 'anthropic', deepseek: 'deepseek',
+  qwen: 'qwen', kimi: 'kimi', minimax: 'minimax', glm: 'zhipu', grok: 'xai', cursor: 'cursor'
+};
+const aihotTopicUrl = (slug) => `https://aihot.news/topics/${slug}`;
+const aihotApiUrl = (slug) => `https://aihot.news/api/site/topics/${slug}?page=1`;
+
+function normalizeTopicText(value) {
+  return String(value || '').toLowerCase().replace(/[\s·/／()（）_-]+/g, '');
+}
+function toIsoDate(value) {
+  const text = String(value || '');
+  const date = text.match(/^\d{4}-\d{2}-\d{2}/)?.[0];
+  if (date) return date;
+  const month = text.match(/^\d{4}-\d{2}/)?.[0];
+  return month ? `${month}-01` : '';
+}
+function kindLabel(value) {
+  return ({ model: '模型', product: '产品', company: '公司', price: '价格' })[String(value || '').toLowerCase()] || '动态';
+}
+function topicMatchesProduct(topic, product) {
+  const haystack = normalizeTopicText(`${topic.slug} ${topic.name} ${topic.definition}`);
+  return unique([product.name, product.vendor, ...(product.aliases || [])])
+    .map(normalizeTopicText).filter((needle) => needle.length >= 3).some((needle) => haystack.includes(needle));
+}
+async function fetchAiHotTopicDirectory() {
+  try {
+    const response = await fetch('https://aihot.news/api/site/topics', {
+      headers: { 'User-Agent': 'Modelwise-AIHot-timeline-sync/1.0' }, signal: AbortSignal.timeout(20000)
+    });
+    if (!response.ok) return [];
+    const body = await response.json();
+    return Array.isArray(body.topics) ? body.topics.filter((topic) => topic.group === 'company') : [];
+  } catch { return []; }
+}
+async function fetchAiHotTimeline(slug, product) {
+  try {
+    const response = await fetch(aihotApiUrl(slug), {
+      headers: { 'User-Agent': 'Modelwise-AIHot-timeline-sync/1.0' }, signal: AbortSignal.timeout(25000)
+    });
+    if (!response.ok) throw new Error(`AIHOT topic HTTP ${response.status}`);
+    const data = await response.json();
+    const chronicle = data?.modules?.chronicle || {};
+    // These are exactly the two sets rendered by AIHOT's topic milestone rail.
+    const sourceRows = [...(Array.isArray(chronicle.milestones) ? chronicle.milestones : []), ...(Array.isArray(chronicle.highlights) ? chronicle.highlights : [])];
+    const seen = new Set();
+    const events = sourceRows.map((item) => {
+      const date = toIsoDate(item.date || item.at);
+      const name = String(item.label || item.title || item.headline || '').trim();
+      const key = `${date}|${name}`;
+      if (!date || !name || seen.has(key)) return null;
+      seen.add(key);
+      const relative = String(item.href || '');
+      const source = relative.startsWith('http') ? relative : aihotTopicUrl(slug);
+      return {
+        id: `aihot-${product.id}-${safeId(name)}-${date}`,
+        tool: product.id,
+        date,
+        name: name.slice(0, 180),
+        ability: String(item.summary || item.headline || item.title || '').trim().slice(0, 600),
+        source,
+        status: '已发布',
+        datePrecision: String(item.date || '').length === 7 ? 'month' : 'day',
+        evidence: `AIHOT 主题大事记 · ${data?.topic?.name || slug}`,
+        checked: today,
+        kind: kindLabel(item.kind),
+        origin: 'aihot-topic'
+      };
+    }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
+    return { slug, topicName: data?.topic?.name || slug, events };
+  } catch (error) { return { slug, events: [], error: error.message }; }
+}
+
 async function deepSeekJson(payload) {
   const response = await fetch('https://api.deepseek.com/chat/completions', {
     method: 'POST',
@@ -102,19 +178,39 @@ const offers = Array.isArray(pricing.offers) ? pricing.offers : [];
 const products = Array.isArray(catalog.tools) ? catalog.tools : [];
 if (products.length !== 23) throw new Error(`Expected 23 products, found ${products.length}`);
 
-const run = { checkedAt: timestamp, products: 23, discovered: 0, officialPagesRead: 0, eventsAdded: 0, modelsAdded: 0, pricesAdded: 0, lifecycleChanged: 0, errors: [], source: 'AIHot discovery + official sources + DeepSeek structured review' };
+const aihotTopics = await fetchAiHotTopicDirectory();
+const run = { checkedAt: timestamp, products: 23, discovered: 0, officialPagesRead: 0, eventsAdded: 0, modelsAdded: 0, pricesAdded: 0, lifecycleChanged: 0, aihotTopicsSynced: 0, aihotTimelineEvents: 0, officialTimelineFallbacks: 0, errors: [], source: 'AIHOT topic chronicle + official sources + DeepSeek structured review' };
 for (const product of products) {
   const productRecords = records.filter((record) => record.tool === product.id);
   const productOffers = offers.filter((offer) => offer.tool === product.id);
   const officialUrls = unique([product.source, product.url, ...productRecords.map((record) => record.source), ...productOffers.map((offer) => offer.source)]).filter(isHttp);
   const domains = new Set(officialUrls.map(hostname));
-  const [discovery, ...officialResponses] = await Promise.all([aiHot(product), ...officialUrls.map(fetchText)]);
+  const matchedTopic = aihotTopics.find((topic) => topic.slug === AIHOT_TOPIC_OVERRIDES[product.id]) || aihotTopics.find((topic) => topicMatchesProduct(topic, product));
+  const [discovery, topicTimeline, ...officialResponses] = await Promise.all([
+    aiHot(product),
+    matchedTopic ? fetchAiHotTimeline(matchedTopic.slug, product) : Promise.resolve(null),
+    ...officialUrls.map(fetchText)
+  ]);
   run.discovered += discovery.length;
+  // A matched AIHOT topic replaces the entire historical timeline for that
+  // product. This removes stale model-only placeholder events.
+  if (topicTimeline?.events?.length) {
+    for (let index = events.length - 1; index >= 0; index--) if (events[index].tool === product.id) events.splice(index, 1);
+    events.push(...topicTimeline.events);
+    run.aihotTopicsSynced++;
+    run.aihotTimelineEvents += topicTimeline.events.length;
+  } else if (matchedTopic && topicTimeline?.error) {
+    run.errors.push({ tool: product.id, error: `AIHOT topic ${matchedTopic.slug}: ${topicTimeline.error}; official timeline retained.` });
+  } else if (!matchedTopic) {
+    run.officialTimelineFallbacks++;
+  }
   const readable = officialResponses.filter((page) => page.ok);
   run.officialPagesRead += readable.length;
   if (!readable.length) { run.errors.push({ tool: product.id, error: 'No official source page could be read; existing data retained.' }); continue; }
   const prompt = `You update one AI product in a public catalogue. Return JSON only. Do not infer, invent, or fill missing facts. AIHOT is only a lead; only official evidence below may support an update. A price may be returned only for a text model with explicit input AND output price per 1,000,000 text tokens. Never treat subscriptions, image/video/audio, per-minute/second, credits, or request prices as token prices. Keep announcementDate and effectiveDate separate. If there is no verified change, return empty arrays.\n\nProduct: ${JSON.stringify({ id: product.id, name: product.name, vendor: product.vendor, aliases: product.aliases || [] })}\nAllowed official domains: ${JSON.stringify([...domains])}\nAIHOT leads: ${JSON.stringify(discovery).slice(0, 12000)}\nOfficial source text: ${JSON.stringify(readable.map(({ url, text }) => ({ url, text }))).slice(0, 50000)}\n\nRequired JSON schema:\n{"events":[{"name":"","summary":"","kind":"模型|产品|价格|迁移","announcementDate":"YYYY-MM-DD","effectiveDate":"YYYY-MM-DD or null","status":"","source":"official URL","evidence":"short official supporting text"}],"models":[{"api":"","name":"","description":"","announcementDate":"YYYY-MM-DD or null","status":"在售|预览|下线|迁移","source":"official URL","evidence":"short official supporting text"}],"prices":[{"api":"","name":"","currency":"CNY|USD","inputPerMillionTokens":0,"outputPerMillionTokens":0,"effectiveDate":"YYYY-MM-DD or null","validUntil":"YYYY-MM-DD or null","status":"active|scheduled","note":"","source":"official URL","evidence":"short official supporting text"}],"lifecycle":[{"api":"","status":"active|preview|scheduled|deprecated|retired|migrating","note":"","source":"official URL","evidence":"short official supporting text"}]}`;
-  const timelineInstruction = `\n\nTimeline policy override: AIHOT is the primary source for timeline events. If an AIHOT lead is genuinely about this product, return it in events using its aihotSource URL as source and evidence beginning "AIHOT：". When AIHOT has no relevant item, return a relevant official announcement as the fallback. Do not turn an old product/model list into a new timeline event. AIHOT is allowed only for events; models, prices, and lifecycle records still require an official URL.`;
+  const timelineInstruction = topicTimeline?.events?.length
+    ? `\n\nTimeline policy: this product has an AIHOT topic chronicle already synchronized. Return an empty events array. Update only models, prices, and lifecycle from official evidence.`
+    : `\n\nTimeline policy: AIHOT has no product topic chronicle for this product. Return an event only when a relevant official announcement is present. Do not turn an old product/model list into a new timeline event. Models, prices, and lifecycle always require an official URL.`;
   try {
     const changes = normalize(product, await deepSeekJson(prompt + timelineInstruction), domains);
     for (const item of changes.events) if (!hasEvent(events, item)) { item.id = `weekly-${product.id}-${safeId(item.name)}-${item.date}`; events.push(item); run.eventsAdded++; }
@@ -145,10 +241,10 @@ catalog.checked = today;
 if (Array.isArray(catalog.range)) catalog.range[1] = today;
 workbook.asOf = today; workbook.importedAt = today;
 pricing.checked = today;
-const totalChanges = run.eventsAdded + run.modelsAdded + run.pricesAdded + run.lifecycleChanged;
+const totalChanges = run.eventsAdded + run.modelsAdded + run.pricesAdded + run.lifecycleChanged + run.aihotTimelineEvents;
 if (totalChanges) {
   const items = Array.isArray(changelogData) ? changelogData : (Array.isArray(changelogData.items) ? changelogData.items : []);
-  items.unshift({ date: today, title: '每周模型资料更新', summary: `已核查 23 个产品：新增大事记 ${run.eventsAdded} 条、新型号 ${run.modelsAdded} 个、价格变更 ${run.pricesAdded} 项、生命周期更新 ${run.lifecycleChanged} 项。每条更新均保留官方来源。`, source: 'GitHub Actions · AIHot + 官方来源 + DeepSeek' });
+  items.unshift({ date: today, title: '每周模型资料更新', summary: `已核查 23 个产品：同步 AIHOT 大事记 ${run.aihotTimelineEvents} 条、官网补充大事记 ${run.eventsAdded} 条、新型号 ${run.modelsAdded} 个、价格变更 ${run.pricesAdded} 项。`, source: 'GitHub Actions · AIHOT 主题大事记 + 官方来源 + DeepSeek' });
   if (Array.isArray(changelogData)) changelogData.length = 0, changelogData.push(...items.slice(0, 200)); else changelogData.items = items.slice(0, 200);
 }
 await Promise.all([writeJson('catalog.json', catalog), writeJson('workbook-models.json', workbook), writeJson('pricing.json', pricing), writeJson('changelog.json', changelogData), writeJson('update-status.json', run)]);
