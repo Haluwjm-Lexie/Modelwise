@@ -4,6 +4,12 @@
   "automaticModelUpdates": false,
   "items": [
     {
+      "date": "2026-11-09",
+      "title": "每周模型资料检查",
+      "summary": "已检查 23 个产品；AIHOT 发现 26 条动态，结果由 DeepSeek 整理并按官网证据核验。",
+      "source": "GitHub Actions"
+    },
+    {
       "date": "2026-11-07",
       "title": "每周模型资料检查",
       "summary": "已检查 23 个产品；AIHOT 发现 26 条动态，结果由 DeepSeek 整理并按官网证据核验。",
