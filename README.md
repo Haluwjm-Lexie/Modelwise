@@ -88,8 +88,15 @@ Modelwise 使用 GitHub Actions 定时更新资料。
 ```bash
 git clone https://github.com/Haluwjm-Lexie/Modelwise.git
 cd Modelwise
+```
+
+随后直接用浏览器打开 `index.html`，或使用 VS Code 的 Live Server 预览。
+
+---
 
 ## 项目结构
+
+```text
 Modelwise/
 ├── index.html                 # 网站入口
 ├── design.css                 # 基础设计系统
@@ -104,21 +111,31 @@ Modelwise/
 │   └── weekly-update.mjs      # 每周更新脚本
 └── .github/workflows/
     └── weekly-update.yml      # GitHub Actions 定时任务
+```
 
+---
 
 ## 数据来源
-- AIHOT
+
+- [AIHOT](https://aihot.news/)
 - 各模型与产品的官方网站、官方文档、官方定价页和官方公告
+
 Modelwise 会尽量标明资料来源与核查日期，但 AI 产品与价格变化很快。实际采购、上线或商业决策前，请以厂商最终官方页面为准。
 
+---
+
 ## 适合谁使用
-不知道该选 ChatGPT、Claude、Gemini 还是 DeepSeek 的个人用户
-需要给项目做模型选型的 AI 产品经理
-需要估算 Token 成本的开发者与创业团队
-想持续关注国内外 AI 模型变化的学习者
-需要向客户、老板或面试官解释选型依据的人
+
+- 不知道该选 ChatGPT、Claude、Gemini 还是 DeepSeek 的个人用户
+- 需要给项目做模型选型的 AI 产品经理
+- 需要估算 Token 成本的开发者与创业团队
+- 想持续关注国内外 AI 模型变化的学习者
+- 需要向客户、老板或面试官解释选型依据的人
+
+---
 
 ## 路线图
+
 - [x] 23 个产品资料库
 - [x] AIHOT 主题大事记同步
 - [x] 官网资料补充
@@ -130,7 +147,10 @@ Modelwise 会尽量标明资料来源与核查日期，但 AI 产品与价格变
 - [ ] 收藏模型后的重要更新提醒
 - [ ] 统一任务集下的模型实测与评分体系
 
-##作者
-由 Lexie / 王杰美 设计与构建。
+---
+
+## 作者
+
+由 **Lexie / 王杰美** 设计与构建。
 
 Modelwise · 让每次模型选择更明白。
