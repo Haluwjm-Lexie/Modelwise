@@ -1,3 +1,60 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#002fa7"><meta name="description" content="找到适合这次任务的 AI 模型，比较型号，算清成本。"><title>Modelwise · 选对模型，算清成本</title><link rel="icon" href="assets/modelwise.svg" type="image/svg+xml"><link rel="stylesheet" href="design.css"></head>
-<body><aside class="sidebar"><a class="wordmark" href="#library" aria-label="Modelwise 首页">m<span class="brand-o">o</span>del<span class="wise">wise</span><i></i></a><p class="brand-caption">选对模型，算清成本。</p><div class="nav-label">工作空间</div><nav aria-label="主导航"><a href="#library" data-nav="library"><span>▦</span> 模型资料库</a><a href="#select" data-nav="select"><span>◇</span> 场景选型</a><a href="#compare" data-nav="compare"><span>⇄</span> 型号对比 <b id="nav-count"></b></a><a href="#cost" data-nav="cost"><span>◎</span> 成本与收益</a><a href="#reports" data-nav="reports"><span>▤</span> 我的报告</a><a href="#changelog" data-nav="changelog"><span>↻</span> 更新日志</a></nav><div class="sidebar-bottom"><button id="theme-toggle" class="theme-button">☾ 深色模式</button><span>MODELWISE / 2026</span></div></aside><div class="workspace"><header class="topbar"><span id="breadcrumb">模型资料库</span><div class="top-actions"><button class="icon-button mobile-theme" aria-label="切换主题" data-action="theme">◐</button><a href="#select" class="text-link">开始一次选型 ↗</a></div></header><main id="app" tabindex="-1"><div class="loading">正在载入模型资料…</div></main><footer>Modelwise · 让每次选择更明白。</footer></div><div id="compare-dock" class="compare-dock hidden"></div><div id="toast" role="status" class="toast hidden"></div><script src="core.js"></script><script src="modelwise.js"></script><script src="improvements.js"></script></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#002fa7">
+  <meta name="description" content="找到适合这次任务的 AI 模型，比较型号，算清成本。">
+  <title>Modelwise · 选对模型，算清成本</title>
+  <link rel="icon" href="assets/modelwise.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="design.css">
+  <link rel="stylesheet" href="visual-sync.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <a class="wordmark" href="#library" aria-label="Modelwise 首页">m<span class="brand-o">o</span>del<span class="wise">wise</span><i></i></a>
+    <p class="brand-caption">选对模型，算清成本。</p>
+
+    <div class="nav-label">工作空间</div>
+
+    <nav aria-label="主导航">
+      <a href="#library" data-nav="library"><span>▦</span> 模型资料库</a>
+      <a href="#select" data-nav="select"><span>◇</span> 场景选型</a>
+      <a href="#compare" data-nav="compare"><span>⇄</span> 型号对比 <b id="nav-count"></b></a>
+      <a href="#cost" data-nav="cost"><span>◎</span> 成本与收益</a>
+      <a href="#reports" data-nav="reports"><span>▤</span> 我的报告</a>
+      <a href="#changelog" data-nav="changelog"><span>↻</span> 更新日志</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <button id="theme-toggle" class="theme-button">☾ 深色模式</button>
+      <span>MODELWISE / 2026</span>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span id="breadcrumb">模型资料库</span>
+      <div class="top-actions">
+        <button class="icon-button mobile-theme" aria-label="切换主题" data-action="theme">◐</button>
+        <a href="#select" class="text-link">开始一次选型 ↗</a>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <div class="loading">正在载入模型资料…</div>
+    </main>
+
+    <footer>Modelwise · 让每次选择更明白。</footer>
+  </div>
+
+  <div id="compare-dock" class="compare-dock hidden"></div>
+  <div id="toast" role="status" class="toast hidden"></div>
+
+  <script src="core.js"></script>
+  <script src="modelwise.js"></script>
+  <script src="improvements.js"></script>
+  <script src="visual-sync.js"></script>
+</body>
+</html>
