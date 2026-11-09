@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-09T13:44:30.763Z",
+  "checkedAt": "2026-11-09T19:05:09.685Z",
   "products": 23,
-  "discovered": 3,
+  "discovered": 46,
   "officialPagesRead": 101,
-  "eventsAdded": 1,
-  "modelsAdded": 9,
-  "pricesAdded": 4,
+  "eventsAdded": 10,
+  "modelsAdded": 2,
+  "pricesAdded": 0,
   "lifecycleChanged": 9,
   "errors": [],
   "source": "AIHot discovery + official sources + DeepSeek structured review"
