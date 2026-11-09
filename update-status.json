@@ -1,8 +1,12 @@
 {
-  "checkedAt": "2026-11-09T05:28:20.289Z",
+  "checkedAt": "2026-11-09T13:44:30.763Z",
   "products": 23,
-  "discovered": 26,
-  "events": 11,
-  "models": 7,
-  "source": "AIHOT + DeepSeek + official sources"
+  "discovered": 3,
+  "officialPagesRead": 101,
+  "eventsAdded": 1,
+  "modelsAdded": 9,
+  "pricesAdded": 4,
+  "lifecycleChanged": 9,
+  "errors": [],
+  "source": "AIHot discovery + official sources + DeepSeek structured review"
 }
