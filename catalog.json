@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
-  "checked": "2026-11-09",
+  "checked": "2026-11-16",
   "range": [
     "2022-11-01",
-    "2026-11-09"
+    "2026-11-16"
   ],
   "coverageNote": "2022.11—2026.11.03 已核实的模型与产品里程碑；不穷尽每个小版本，未公开日期单列待核实。",
   "tools": [
@@ -25,7 +25,7 @@
       ],
       "summary": "产品、GPT 模型、o 系列和 Codex 专用模型分别记录，追溯 2022 年起的演进。",
       "limit": "订阅与 API 分别计费；在 Chat、Work、Codex 中的可用性并不相同。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/chatgpt.svg",
       "logoSource": "https://openai.com/favicon.svg",
@@ -58,7 +58,7 @@
       ],
       "summary": "多模态理解、长上下文与 Google 生态中的个人和开发者入口。",
       "limit": "Gemini App 权益不等于 API；图片生成、语音与视频模型分开选择。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/gemini.png",
       "logoSource": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
@@ -90,7 +90,7 @@
       ],
       "summary": "对话助手与多个模型档位，代码与长程知识工作单独建立版本记录。",
       "limit": "Haiku、Sonnet、Opus 等档位不是统一价格；旧版本留档不等于可调用。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/claude.svg",
       "logoSource": "https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg",
@@ -118,7 +118,7 @@
       ],
       "summary": "围绕代码库、Agent 和编辑器交互的编程产品，同时包含 Composer 自有模型。",
       "limit": "编辑器版本与底层模型版本不同；可切换模型也不等于拥有其 API 权限。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/cursor.ico",
       "logoSource": "https://cursor.com/marketing-static/favicon-light.ico",
@@ -150,7 +150,7 @@
       ],
       "summary": "通用助手、代码及视觉创作模型线；联网能力需明确是否启用搜索工具。",
       "limit": "X 上的即时内容不是天然可靠事实；API 搜索和生成可能额外收费。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/grok.svg",
       "logoSource": "https://grok.com/images/favicon.svg",
@@ -182,7 +182,7 @@
       ],
       "summary": "通用问答、推理与代码模型家族；API 别名与具体快照分别记录。",
       "limit": "图片理解与图片生成不同；峰谷、缓存、调用工具需要分别计费。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/deepseek.ico",
       "logoSource": "https://www.deepseek.com/favicon.ico",
@@ -214,7 +214,7 @@
       ],
       "summary": "字节跳动通用 AI 助手；本页收录 Doubao / Seed 通用语言与理解模型。",
       "limit": "豆包 App 权益不等于方舟 API；不要把某个版本能力套用到整个系列。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/doubao.png",
       "logoSource": "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/chat/favicon-doubao.png",
@@ -246,7 +246,7 @@
       ],
       "summary": "月之暗面的 Kimi 助手与 K 系列模型，从长文本阅读走向代码、研究和多步任务。",
       "limit": "长上下文上限不保证长文检索准确率；历史 API 需核实退役状态。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/kimi-k.ico",
       "logoSource": "https://www.kimi.com/favicon.ico",
@@ -279,7 +279,7 @@
       ],
       "summary": "覆盖文本、视觉、语音与代码的模型家族，开源权重和托管服务并行。",
       "limit": "许可证按具体型号核实；视觉、音频、代码分支不能混为一个模型。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/qwen-product.png",
       "logoSource": "https://qwenlm.github.io/favicon.png",
@@ -288,7 +288,7 @@
       "focus": "Qwen3.8 · 通用、视觉与代码",
       "workbookIntro": "通用与开源模型生态，覆盖文本、多模态、代码与智能体；百炼是API平台，千问是应用。",
       "workbookApplications": "千问",
-      "workbookModelCount": 6,
+      "workbookModelCount": 8,
       "aliases": [
         "通义千问 / Qwen",
         "阿里巴巴"
@@ -309,7 +309,7 @@
       ],
       "summary": "秘塔科技的 AI 搜索与学习产品，使用自研 MetaLLM 等技术。",
       "limit": "搜索结论仍需打开原始来源；未取得完整公开底层模型版本历史。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/metaso.png",
       "logoSource": "https://metaso.cn/apple-touch-icon.png",
@@ -338,7 +338,7 @@
       ],
       "summary": "文心产品与 ERNIE 模型分别记录，企业 API 通过千帆渠道核实。",
       "limit": "产品更名不是新模型；各区域、上下文档位与思考模式应单独报价。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/ernie-product.png",
       "logoSource": "https://psstatic.cdn.bcebos.com/aife/image/baidu_ai_logo_1736910930000.png",
@@ -370,7 +370,7 @@
       ],
       "summary": "暂按蚂蚁百灵收录，涵盖 Ling、Ring、Ming；不与阿里 Qwen 混同。",
       "limit": "蚂蚁集团旗下产品范围需确认；此处按百灵模型家族建档，具体使用许可与部署条件逐版本核实。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/ant.ico",
       "logoSource": "https://gw.alipayobjects.com/render/p/yuyan/180020010001289651/favicon.ico",
@@ -398,7 +398,7 @@
       ],
       "summary": "字节跳动视觉创作产品，分别使用 Seedream 图片系列与 Seedance 视频系列。",
       "limit": "即梦产品版本不等于 Seedream / Seedance 版本；积分不等于 token。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/jimeng.ico",
       "logoSource": "https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v1.ico",
@@ -427,7 +427,7 @@
       ],
       "summary": "清言是应用，GLM 是模型家族；长程代码任务与通用问答需分开比较。",
       "limit": "开源许可证按具体版本核实；Coding Plan 额度不等于 API token 余额。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/glm.png",
       "logoSource": "https://www.bigmodel.cn/static/images/favicon.png",
@@ -460,7 +460,7 @@
       ],
       "summary": "腾讯的 AI 助手；本页统一收录腾讯混元 Hy 系列及其开发接口。",
       "limit": "旧服务逐步迁移至 TokenHub；历史型号不保证仍可新购调用。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/yuanbao.png",
       "logoSource": "https://hunyuan-blog-web-prod-1258344703.cos.ap-guangzhou.myqcloud.com/logo.svg",
@@ -495,7 +495,7 @@
       ],
       "summary": "文本 Agent、代码、语音和视频分线演进，分别维护能力与计价单位。",
       "limit": "M 系列不是海螺视频模型；不同长度、优先级和套餐可能改变价格。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/minimax.ico",
       "logoSource": "https://www.minimax.io/favicon.ico",
@@ -526,7 +526,7 @@
       ],
       "summary": "通用助手、推理模型与语音相关服务；型号及调用协议分开记录。",
       "limit": "官网与旧接口文档存在并行命名，需确认实际调用型号和下线通知。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/spark.ico",
       "logoSource": "https://xinghuo.xfyun.cn/spark-icon.ico",
@@ -557,7 +557,7 @@
       ],
       "summary": "以多模态理解、推理与生成能力为主的模型体系。",
       "limit": "厂商“第一”等宣传不当作跨模型统一结论；使用同任务对测。",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "coverage": "部分里程碑已核实；不保证穷尽全部快照",
       "logo": "assets/sense.ico",
       "logoSource": "https://www.sensetime.com/assets/favicon.ico",
@@ -588,13 +588,13 @@
       "focus": "医疗循证增强模型；可能自动触发医疗搜索。",
       "limit": "能力与可用状态按具体版本核实。",
       "coverage": "本次 Excel 提供当前型号；历史发布时间待补证",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "logo": "assets/official-baichuan.png",
       "logoStatus": "官方图标",
       "logoSource": "https://www.baichuan-ai.com/apple-touch-icon.png",
       "workbookIntro": "研发通用与医疗模型；当前重点向医疗场景发展，并非所有百川模型都开源。",
       "workbookApplications": "百小应（历史应用品牌）",
-      "workbookModelCount": 6,
+      "workbookModelCount": 12,
       "aliases": [
         "Baichuan",
         "百川智能 Baichuan"
@@ -617,7 +617,7 @@
       "focus": "书生服务迁移公告列出的保留模型。",
       "limit": "能力与可用状态按具体版本核实。",
       "coverage": "本次 Excel 提供当前型号；历史发布时间待补证",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "logo": "assets/official-internlm.png",
       "logoStatus": "官方图标",
       "logoSource": "https://internlm.intern-ai.org.cn/intern%20logo.png",
@@ -646,7 +646,7 @@
       "focus": "支持图像理解的高性能Agent模型，1M上下文，最大输出256K。",
       "limit": "能力与可用状态按具体版本核实。",
       "coverage": "本次 Excel 提供当前型号；历史发布时间待补证",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "logo": "assets/official-longcat.svg",
       "logoStatus": "官方图标",
       "logoSource": "https://s3plus.meituan.net/aigc-media-resources/longcat/yeqian-logo.svg",
@@ -675,7 +675,7 @@
       "focus": "MiMo旗舰语言模型，面向复杂推理与长程任务。",
       "limit": "能力与可用状态按具体版本核实。",
       "coverage": "本次 Excel 提供当前型号；历史发布时间待补证",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "logo": "assets/official-mimo.png",
       "logoStatus": "官方图标",
       "logoSource": "https://mimo.mi.com/favicon.png",
@@ -704,7 +704,7 @@
       "focus": "高能力通用多模态模型。",
       "limit": "能力与可用状态按具体版本核实。",
       "coverage": "本次 Excel 提供当前型号；历史发布时间待补证",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "logo": "assets/official-mistral.svg",
       "logoStatus": "官方图标",
       "logoSource": "https://mistral.ai/",
@@ -2437,6 +2437,20 @@
       "id": "weekly-longcat-longcat-2-5-2026-11-04"
     },
     {
+      "tool": "internlm",
+      "date": "2026-10-26",
+      "name": "InternLM Chat 与 API 服务迁移至 InternLM Discovery",
+      "ability": "官方发布服务迁移通知：2026-11-09 起现有 Chat/API 入口仅保留 Intern-S2，其他模型 ID 请求自动路由至 Intern-S2；2027-01-26 起现有 Chat/API 入口停止服务，改由 InternLM Discovery 提供。",
+      "source": "https://internlm.intern-ai.org.cn/docEn/docs/service-migration/",
+      "status": "scheduled",
+      "datePrecision": "day",
+      "evidence": "Starting November 9, 2026: Only the Intern-S2 model will remain available through the existing Chat and API entry points. Starting January 26, 2027: The existing Chat and API entry points will be discontinued.",
+      "checked": "2026-11-09",
+      "kind": "迁移",
+      "effectiveDate": "2026-11-09",
+      "id": "weekly-internlm-internlm-chat-api-internlm-discovery-2026-10-26"
+    },
+    {
       "id": "aihot-chatgpt-openai-2015-12-01",
       "tool": "chatgpt",
       "date": "2015-12-01",
@@ -2446,7 +2460,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -2460,7 +2474,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2474,7 +2488,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2488,7 +2502,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -2502,7 +2516,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2516,7 +2530,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2530,7 +2544,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2544,7 +2558,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2558,7 +2572,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2572,7 +2586,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2586,7 +2600,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -2600,7 +2614,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2614,7 +2628,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2628,7 +2642,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2642,7 +2656,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2656,7 +2670,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2670,7 +2684,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2684,7 +2698,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2698,7 +2712,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2712,7 +2726,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2726,7 +2740,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2740,7 +2754,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2754,7 +2768,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2768,7 +2782,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2782,7 +2796,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2796,7 +2810,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -2810,7 +2824,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2824,7 +2838,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -2838,7 +2852,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2852,7 +2866,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2866,7 +2880,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2880,7 +2894,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2894,7 +2908,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2908,7 +2922,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2922,7 +2936,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2936,7 +2950,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2950,7 +2964,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -2964,7 +2978,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2978,7 +2992,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -2992,7 +3006,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3006,7 +3020,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3020,7 +3034,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3034,7 +3048,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3048,7 +3062,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3062,7 +3076,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3076,7 +3090,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3090,7 +3104,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3104,7 +3118,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3118,7 +3132,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3132,7 +3146,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -3146,7 +3160,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3160,7 +3174,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3174,7 +3188,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3188,7 +3202,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3202,7 +3216,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3216,7 +3230,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3230,7 +3244,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · OpenAI / ChatGPT",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -3244,7 +3258,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3258,7 +3272,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "动态",
       "origin": "aihot-topic"
     },
@@ -3272,7 +3286,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3286,7 +3300,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3300,7 +3314,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3314,7 +3328,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -3328,7 +3342,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3342,7 +3356,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3356,7 +3370,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3370,7 +3384,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3384,7 +3398,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3398,7 +3412,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3412,7 +3426,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3426,7 +3440,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3440,7 +3454,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3454,7 +3468,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3468,7 +3482,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3482,7 +3496,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3496,7 +3510,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3510,7 +3524,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3524,7 +3538,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3538,7 +3552,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3552,7 +3566,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3566,7 +3580,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3580,7 +3594,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3594,7 +3608,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3608,7 +3622,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3622,7 +3636,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3636,7 +3650,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3650,7 +3664,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3664,7 +3678,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3678,7 +3692,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3692,7 +3706,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3706,7 +3720,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3720,7 +3734,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3734,7 +3748,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3748,7 +3762,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3762,7 +3776,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3776,7 +3790,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3790,7 +3804,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3804,7 +3818,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3818,7 +3832,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3832,7 +3846,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3846,7 +3860,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3860,21 +3874,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
-      "kind": "模型",
-      "origin": "aihot-topic"
-    },
-    {
-      "id": "aihot-gemini-gemini-4-argon-2026-10-12",
-      "tool": "gemini",
-      "date": "2026-10-12",
-      "name": "Gemini 4 Argon 发布",
-      "ability": "Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型",
-      "source": "https://aihot.news/topics/google",
-      "status": "已发布",
-      "datePrecision": "day",
-      "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3888,7 +3888,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3902,7 +3902,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3916,8 +3916,92 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Google / Gemini",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-gemini-4-carbon-2026-11-09",
+      "tool": "gemini",
+      "date": "2026-11-09",
+      "name": "Gemini 4 Carbon 发布",
+      "ability": "Google DeepMind 发布 Gemini 4 Carbon 前沿模型",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-gemini-4-carbon-2026-11-10",
+      "tool": "gemini",
+      "date": "2026-11-10",
+      "name": "Gemini 4 Carbon 发布",
+      "ability": "Google DeepMind 发布 Gemini 4 Carbon 前沿模型",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-gemini-4-carbon-gemini-api-ai-studio-antigravity-2026-11-11",
+      "tool": "gemini",
+      "date": "2026-11-11",
+      "name": "Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity",
+      "ability": "Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "产品",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-gemini-4-hydrogen-2026-11-11",
+      "tool": "gemini",
+      "date": "2026-11-11",
+      "name": "Gemini 4 Hydrogen 发布",
+      "ability": "Google DeepMind 发布 Gemini 4 Hydrogen",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-gemini-4-hydrogen-2026-11-12",
+      "tool": "gemini",
+      "date": "2026-11-12",
+      "name": "Gemini 4 Hydrogen 发布",
+      "ability": "Google DeepMind 发布 Gemini 4 Hydrogen",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-gemini-google-antigravity-teamwork-2026-11-13",
+      "tool": "gemini",
+      "date": "2026-11-13",
+      "name": "Google 展示 Antigravity /teamwork 多智能体协作成果并开放给研究者使用",
+      "ability": "Google 展示 Antigravity /teamwork 多智能体协作成果并开放给研究者使用",
+      "source": "https://aihot.news/topics/google",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Google / Gemini",
+      "checked": "2026-11-16",
+      "kind": "产品",
       "origin": "aihot-topic"
     },
     {
@@ -3930,7 +4014,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -3944,7 +4028,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3958,7 +4042,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3972,7 +4056,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -3986,7 +4070,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4000,7 +4084,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4014,7 +4098,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4028,7 +4112,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4042,7 +4126,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4056,7 +4140,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4070,7 +4154,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4084,7 +4168,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4098,7 +4182,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4112,7 +4196,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4126,7 +4210,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4140,7 +4224,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4154,7 +4238,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4168,7 +4252,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4182,7 +4266,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4196,7 +4280,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4210,7 +4294,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4224,7 +4308,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4238,7 +4322,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4252,7 +4336,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4266,7 +4350,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4280,7 +4364,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4294,7 +4378,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4308,7 +4392,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4322,7 +4406,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4336,7 +4420,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4350,7 +4434,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4364,7 +4448,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4378,7 +4462,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4392,7 +4476,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4406,7 +4490,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4420,49 +4504,21 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
     {
-      "id": "aihot-claude-wsj-anthropic-ipo-163-807-4500-2026-10-15",
-      "tool": "claude",
-      "date": "2026-10-15",
-      "name": "WSJ 披露 Anthropic IPO 草案：上半年收入 163 亿美元、纸面亏损 807 亿美元、约 4500 亿美元算力承诺",
-      "ability": "WSJ 披露 Anthropic IPO 草案：上半年收入 163 亿美元、纸面亏损 807 亿美元、约 4500 亿美元算力承诺",
-      "source": "https://aihot.news/topics/anthropic",
-      "status": "已发布",
-      "datePrecision": "day",
-      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
-      "kind": "公司",
-      "origin": "aihot-topic"
-    },
-    {
-      "id": "aihot-claude-ipo-11-807-7-2026-10-25",
-      "tool": "claude",
-      "date": "2026-10-25",
-      "name": "IPO 招股书11个细节解读：千亿募资、807亿美元亏损与7美元控股权",
-      "ability": "Anthropic IPO 招股书11个细节解读：千亿募资、807亿美元亏损与7美元控股权",
-      "source": "https://aihot.news/topics/anthropic",
-      "status": "已发布",
-      "datePrecision": "day",
-      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
-      "kind": "公司",
-      "origin": "aihot-topic"
-    },
-    {
-      "id": "aihot-claude-ipo-11-807-7-2026-10-26",
+      "id": "aihot-claude-ipo-2026-10-26",
       "tool": "claude",
       "date": "2026-10-26",
-      "name": "IPO 招股书11个细节解读：千亿募资、807亿美元亏损与7美元控股权",
-      "ability": "Anthropic IPO 招股书11个细节解读：千亿募资、807亿美元亏损与7美元控股权",
+      "name": "官宣首次公开募股（IPO）",
+      "ability": "Anthropic 官宣首次公开募股（IPO）",
       "source": "https://aihot.news/topics/anthropic",
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4476,8 +4532,22 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-claude-claude-whiteboards-claude-sheets-2026-11-09",
+      "tool": "claude",
+      "date": "2026-11-09",
+      "name": "Claude Whiteboards 和 Claude Sheets 发布",
+      "ability": "Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data",
+      "source": "https://aihot.news/topics/anthropic",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
+      "checked": "2026-11-16",
+      "kind": "产品",
       "origin": "aihot-topic"
     },
     {
@@ -4490,8 +4560,50 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-claude-claude-whiteboards-claude-sheets-2026-11-10",
+      "tool": "claude",
+      "date": "2026-11-10",
+      "name": "Claude Whiteboards 和 Claude Sheets 发布",
+      "ability": "Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data",
+      "source": "https://aihot.news/topics/anthropic",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
+      "checked": "2026-11-16",
+      "kind": "产品",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-claude-anthropic-claude-opus-5-5-2026-11-11",
+      "tool": "claude",
+      "date": "2026-11-11",
+      "name": "Anthropic 建议把 Claude Opus 5.5 作为知识工作的日常主力模型",
+      "ability": "Anthropic 建议把 Claude Opus 5.5 作为知识工作的日常主力模型",
+      "source": "https://aihot.news/topics/anthropic",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
+      "checked": "2026-11-16",
+      "kind": "产品",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-claude-anthropic-claude-opus-5-5-2026-11-12",
+      "tool": "claude",
+      "date": "2026-11-12",
+      "name": "Anthropic 建议把 Claude Opus 5.5 作为知识工作的日常主力模型",
+      "ability": "Anthropic 建议把 Claude Opus 5.5 作为知识工作的日常主力模型",
+      "source": "https://aihot.news/topics/anthropic",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · Anthropic / Claude",
+      "checked": "2026-11-16",
+      "kind": "产品",
       "origin": "aihot-topic"
     },
     {
@@ -4504,7 +4616,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4518,7 +4630,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4532,7 +4644,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4546,7 +4658,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4560,7 +4672,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4574,7 +4686,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4588,7 +4700,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4602,7 +4714,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4616,7 +4728,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4630,7 +4742,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4644,7 +4756,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4658,7 +4770,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4672,7 +4784,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4686,7 +4798,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4700,21 +4812,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
-      "kind": "产品",
-      "origin": "aihot-topic"
-    },
-    {
-      "id": "aihot-cursor-xai-the-x-subscription-2026-10-12",
-      "tool": "cursor",
-      "date": "2026-10-12",
-      "name": "xAI 推出 The X Subscription",
-      "ability": "xAI 推出 The X Subscription，把 Grok、Grok Bot、Cursor 和 X Premium 合并为一个订阅",
-      "source": "https://aihot.news/topics/cursor",
-      "status": "已发布",
-      "datePrecision": "day",
-      "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4728,7 +4826,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · Cursor",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4742,7 +4840,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4756,7 +4854,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4770,7 +4868,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4784,7 +4882,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4798,7 +4896,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4812,7 +4910,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4826,7 +4924,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4840,7 +4938,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4854,7 +4952,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4868,7 +4966,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4882,7 +4980,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4896,7 +4994,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4910,7 +5008,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4924,7 +5022,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4938,7 +5036,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -4952,7 +5050,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4966,7 +5064,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -4980,7 +5078,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -4994,7 +5092,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5008,7 +5106,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5022,7 +5120,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5036,7 +5134,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5050,7 +5148,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5064,7 +5162,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5078,7 +5176,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5092,7 +5190,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5106,7 +5204,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5120,7 +5218,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5134,7 +5232,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5148,7 +5246,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5162,7 +5260,21 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · xAI / Grok",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-grok-grok-voice-3-0-2026-10-14",
+      "tool": "grok",
+      "date": "2026-10-14",
+      "name": "Grok Voice 3.0 发布",
+      "ability": "xAI 发布 Grok Voice 3.0 语音对话模型",
+      "source": "https://aihot.news/topics/xai",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · xAI / Grok",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5176,7 +5288,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5190,7 +5302,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5204,7 +5316,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5218,7 +5330,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5232,7 +5344,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5246,7 +5358,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5260,7 +5372,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5274,7 +5386,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5288,7 +5400,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5302,7 +5414,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5316,7 +5428,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5330,7 +5442,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5344,7 +5456,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5358,7 +5470,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5372,7 +5484,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5386,7 +5498,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5400,7 +5512,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5414,22 +5526,8 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
-      "origin": "aihot-topic"
-    },
-    {
-      "id": "aihot-deepseek-deepseek-2026-10-19",
-      "tool": "deepseek",
-      "date": "2026-10-19",
-      "name": "美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品",
-      "ability": "美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品",
-      "source": "https://aihot.news/topics/deepseek",
-      "status": "已发布",
-      "datePrecision": "day",
-      "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
-      "kind": "公司",
       "origin": "aihot-topic"
     },
     {
@@ -5442,7 +5540,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · DeepSeek",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5456,7 +5554,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5470,7 +5568,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "动态",
       "origin": "aihot-topic"
     },
@@ -5484,7 +5582,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5498,7 +5596,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5512,7 +5610,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5526,7 +5624,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5540,7 +5638,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5554,7 +5652,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5568,7 +5666,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5582,7 +5680,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -5596,7 +5694,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5610,7 +5708,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5624,7 +5722,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5638,7 +5736,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5652,7 +5750,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5666,7 +5764,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5680,7 +5778,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5694,7 +5792,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5708,7 +5806,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5722,7 +5820,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5736,7 +5834,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5750,7 +5848,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 月之暗面 / Kimi",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5764,7 +5862,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5778,7 +5876,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5792,7 +5890,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5806,7 +5904,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5820,7 +5918,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5834,7 +5932,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5848,7 +5946,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5862,7 +5960,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5876,7 +5974,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5890,7 +5988,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5904,7 +6002,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5918,7 +6016,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5932,7 +6030,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -5946,7 +6044,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5960,7 +6058,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5974,7 +6072,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -5988,7 +6086,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6002,7 +6100,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6016,7 +6114,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6030,7 +6128,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6044,7 +6142,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6058,7 +6156,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6072,7 +6170,35 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 千问 Qwen",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-qwen-qwen4-max-2026-11-15",
+      "tool": "qwen",
+      "date": "2026-11-15",
+      "name": "Qwen4-Max 发布",
+      "ability": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+      "source": "https://aihot.news/topics/qwen",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · 千问 Qwen",
+      "checked": "2026-11-16",
+      "kind": "模型",
+      "origin": "aihot-topic"
+    },
+    {
+      "id": "aihot-qwen-qwen4-max-2026-11-16",
+      "tool": "qwen",
+      "date": "2026-11-16",
+      "name": "Qwen4-Max 发布",
+      "ability": "Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力",
+      "source": "https://aihot.news/topics/qwen",
+      "status": "已发布",
+      "datePrecision": "day",
+      "evidence": "AIHOT 主题大事记 · 千问 Qwen",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6086,7 +6212,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -6100,7 +6226,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6114,7 +6240,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6128,7 +6254,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6142,7 +6268,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6156,7 +6282,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6170,7 +6296,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6184,7 +6310,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6198,7 +6324,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6212,7 +6338,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6226,7 +6352,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6240,7 +6366,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6254,7 +6380,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6268,7 +6394,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -6282,7 +6408,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6296,7 +6422,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6310,7 +6436,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6324,7 +6450,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6338,7 +6464,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · 智谱 GLM",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6352,7 +6478,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6366,7 +6492,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6380,7 +6506,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6394,7 +6520,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6408,7 +6534,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6422,7 +6548,7 @@
       "status": "已发布",
       "datePrecision": "month",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6436,7 +6562,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6450,7 +6576,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6464,7 +6590,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "公司",
       "origin": "aihot-topic"
     },
@@ -6478,7 +6604,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6492,7 +6618,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6506,7 +6632,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6520,7 +6646,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6534,7 +6660,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6548,7 +6674,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6562,7 +6688,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "产品",
       "origin": "aihot-topic"
     },
@@ -6576,7 +6702,7 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
     },
@@ -6590,23 +6716,9 @@
       "status": "已发布",
       "datePrecision": "day",
       "evidence": "AIHOT 主题大事记 · MiniMax",
-      "checked": "2026-11-09",
+      "checked": "2026-11-16",
       "kind": "模型",
       "origin": "aihot-topic"
-    },
-    {
-      "tool": "internlm",
-      "date": "2026-10-26",
-      "name": "InternLM Chat 与 API 服务迁移至 InternLM Discovery",
-      "ability": "官方发布服务迁移通知：2026-11-09 起现有 Chat/API 入口仅保留 Intern-S2，其他模型 ID 请求自动路由至 Intern-S2；2027-01-26 起现有 Chat/API 入口停止服务，改由 InternLM Discovery 提供。",
-      "source": "https://internlm.intern-ai.org.cn/docEn/docs/service-migration/",
-      "status": "scheduled",
-      "datePrecision": "day",
-      "evidence": "Starting November 9, 2026: Only the Intern-S2 model will remain available through the existing Chat and API entry points. Starting January 26, 2027: The existing Chat and API entry points will be discontinued.",
-      "checked": "2026-11-09",
-      "kind": "迁移",
-      "effectiveDate": "2026-11-09",
-      "id": "weekly-internlm-internlm-chat-api-internlm-discovery-2026-10-26"
     }
   ]
 }

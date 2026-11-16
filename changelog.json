@@ -4,6 +4,12 @@
   "automaticModelUpdates": false,
   "items": [
     {
+      "date": "2026-11-16",
+      "title": "每周模型资料更新",
+      "summary": "已核查 23 个产品：同步 AIHOT 大事记 305 条、官网补充大事记 0 条、新型号 8 个、价格变更 1 项。",
+      "source": "GitHub Actions · AIHOT 主题大事记 + 官方来源 + DeepSeek"
+    },
+    {
       "date": "2026-11-09",
       "title": "每周模型资料更新",
       "summary": "已核查 23 个产品：同步 AIHOT 大事记 297 条、官网补充大事记 1 条、新型号 0 个、价格变更 0 项。",
